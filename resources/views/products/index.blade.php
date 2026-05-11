@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+
+    <style>
+        /* ===== Базовые настройки ===== */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #9b4e57; /* Лёгкий вишнёво-розовый фон */
+            color: #2a2a2a;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        /* ===== Заголовок ===== */
+        h1 {
+            margin: 0;
+            padding: 20px;
+            background: transparent;
+            border-bottom: 2px solid #e8b4b8;
+            color: #570a19; /* Насыщенный вишнёвый */
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== Блок описания ===== */
+        .intro-section {
+            max-width: 800px;
+            margin: 30px auto 40px;
+            padding: 24px 28px;
+            text-align: center;
+            background: #e1aaaa;
+            border: 1px solid #e8c4c8;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .intro-section h2 {
+            font-size: 22px;
+            color: #7a0e22;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .intro-section p {
+            font-size: 15px;
+            color: #5a5a5a;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ===== Контейнер с карточками ===== */
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+            padding: 10px 15px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* ===== Карточка товара ===== */
+        .card {
+            margin: 0;
+            width: 300px;
+            background: #e1aaaa;
+            border: 1px solid #962532; /* Мягкая вишнёвая рамка */
+            border-radius: 14px;
+            padding: 16px;
+            transition: box-shadow 0.5s ease; /* Плавность только для тени */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+        }
+
+        /* При наведении меняется ТОЛЬКО тень (вишнёвый оттенок) */
+        .card:hover {
+            box-shadow: 0 10px 25px rgb(86, 8, 22);
+        }
+
+        /* ===== Изображение ===== */
+        .img_card {
+            width: 100%;
+            height: 220px;
+            border-radius: 10px;
+            background: #30080e; /* Вишнёво-светлый фон-заглушка */
+            object-fit: cover;
+            display: block;
+            margin-bottom: 14px;
+        }
+
+        /* ===== Заголовок товара ===== */
+        .title {
+            margin: 10px 0 6px;
+            font-size: 17px;
+            font-weight: 600;
+            color: #1a1a1a;
+            line-height: 1.4;
+            min-height: 48px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* ===== Цена ===== */
+        .price {
+            margin: 0 0 10px;
+            font-weight: 700;
+            color: #9e1b32; /* Яркий вишнёвый акцент */
+            font-size: 20px;
+        }
+
+        .price::after {
+            content: ' ₽';
+            font-size: 14px;
+            font-weight: 400;
+            color: #9a7a7e;
+        }
+
+        /* ===== Описание ===== */
+        .desc {
+            margin: 0;
+            font-size: 13px;
+            color: #666666;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            min-height: 60px;
+        }
+
+        /* ===== Лёгкий скроллбар ===== */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #fdf5f6; }
+        ::-webkit-scrollbar-thumb { background: #d4a0a6; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #c28a91; }
+    </style>
+</head>
+
+<body>
+
+    <h1>Каталог товаров</h1>
+
+    <div class="intro-section">
+        <h2>Добро пожаловать в наш каталог!</h2>
+        <p>Здесь вы найдёте лучшие товары по выгодным ценам. Мы тщательно отбираем каждую позицию, чтобы предложить вам только качественную продукцию. Приятных покупок!</p>
+    </div>
+
+    <div class="content">
+        @foreach ($products as $value)
+        <div class="card">
+            <img class="img_card" src="{{$value->image}}" alt="">
+            <div class="title">{{ $value->title ?? $value->titl }}</div>
+            <p class="price">{{$value->price}}</p>
+            <p class="desc">{{$value->description}}</p>
+        </div>
+        @endforeach
+    </div>
+
+</body>
+</html>
