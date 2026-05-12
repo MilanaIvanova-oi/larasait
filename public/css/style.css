@@ -1,13 +1,4 @@
-<!doctype html>
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная страница</title>
-
-    <style>
-        /* ===== Базовые настройки ===== */
+ /* ===== Базовые настройки ===== */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body {
@@ -145,28 +136,3 @@
         ::-webkit-scrollbar-track { background: #fdf5f6; }
         ::-webkit-scrollbar-thumb { background: #d4a0a6; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #c28a91; }
-    </style>
-</head>
-
-<body>
-
-    <h1>Каталог товаров</h1>
-
-    <div class="intro-section">
-        <h2>Добро пожаловать в наш каталог!</h2>
-        <p>Здесь вы найдёте лучшие товары по выгодным ценам. Мы тщательно отбираем каждую позицию, чтобы предложить вам только качественную продукцию. Приятных покупок!</p>
-    </div>
-
-    <div class="content">
-        @foreach ($products as $value)
-        <div class="card">
-            <img class="img_card" src="{{$value->image}}" alt="">
-            <div class="title">{{ $value->title ?? $value->titl }}</div>
-            <p class="price">{{$value->price}}</p>
-            <p class="desc">{{$value->description}}</p>
-        </div>
-        @endforeach
-    </div>
-
-</body>
-</html>
