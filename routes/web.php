@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MyAdminControler;
+use App\Http\Controllers\MyAdminController;
+use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
 
 // 🏠 Главная страница — стандартное приветствие Laravel
 Route::get('/', function () {
@@ -10,7 +12,11 @@ Route::get('/', function () {
 });
 
 // 📦 Твой каталог товаров — по ссылке /product
-Route::get('/product', [ProductController::class, 'index'])->name('products.index');
+Route::get('/', [MainController::class, 'index'])->name('index');
+
+Route::get('/product', [ProductController::class, 'show'])->name('product');
+
+Route::get('/user', [UserController::class, 'index'])->name('user');
 
 // Маршруты для админпанели
-Route::get('/myadmin',[MyAdminControler::class,'index']);
+Route::get('/myadmin',[MyAdminController::class,'index'])->name('myadmin');
