@@ -1,0 +1,84 @@
+          /* 🍒 Стили для формы сообщения */
+        .updatecategory-main {
+            max-width: 620px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+            border: 1px solid #f0d0d4;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        .updatecategory-main .form-group {
+            margin-bottom: 22px;
+        }
+
+        .updatecategory-main label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2a2a2a;
+            font-size: 15px;
+        }
+
+        .updatecategory-main .form-control {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #e2e2e2;
+            border-radius: 10px;
+            font-size: 15px;
+            color: #333;
+            background: #fafafa;
+            transition: all 0.25s ease;
+            outline: none;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        .updatecategory-main .form-control:focus {
+            border-color: #9e1b32;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(158, 27, 50, 0.08);
+        }
+
+        /* Специально для textarea */
+        .updatecategory-main textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+            line-height: 1.5;
+        }
+
+        .updatecategory-main .btn.btn-primary {
+            display: block;
+            width: 100%;
+            padding: 13px;
+            background: #9e1b32;
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.25s ease, transform 0.1s ease;
+            margin-top: 8px;
+            font-family: inherit;
+        }
+
+        .updatecategory-main .btn.btn-primary:hover {
+            background: #7a1526;
+        }
+
+        .updatecategory-main .btn.btn-primary:active {
+            transform: scale(0.98);
+        }
+
+        /* Адаптивность для мобильных */
+        @media (max-width: 640px) {
+            .updatecategory-main {
+                margin: 24px 16px;
+                padding: 24px 18px;
+            }
+        }
+
+       

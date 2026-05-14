@@ -18,5 +18,9 @@ Route::get('/product', [ProductController::class, 'show'])->name('product');
 
 Route::get('/user', [UserController::class, 'index'])->name('user');
 
+Route::get('/about', [MainController::class, 'about'])->name('about');
+
+Route::post('/about', [MainController::class, 'about'])->name('about_start');
+
 // Маршруты для админпанели
 Route::get('/myadmin',[MyAdminController::class,'index'])->name('myadmin');

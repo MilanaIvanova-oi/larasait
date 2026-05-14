@@ -1,4 +1,4 @@
- /* ===== Базовые настройки ===== */
+      /* ===== Базовые настройки ===== */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body {
@@ -23,6 +23,8 @@
             text-align: center;
             letter-spacing: 0.5px;
         }
+
+        
 
         /* ===== Блок описания ===== */
         .intro-section {
@@ -132,7 +134,8 @@
         }
 
         /* ===== Лёгкий скроллбар ===== */
-        ::-webkit-scrollbar { width: 8px; }
+        /* ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #fdf5f6; }
         ::-webkit-scrollbar-thumb { background: #d4a0a6; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #c28a91; }
+        ::-webkit-scrollbar-thumb:hover { background: #c28a91; } */
+        /* 🍒 Стили для меню навигации */
