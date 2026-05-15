@@ -16,6 +16,7 @@
     <li><a href="{{ route('index') }}">Главная</a></li>
     <li><a href="{{ route('user') }}">Пользователь</a></li>
     <li><a href="{{ route('product') }}">Продукты</a></li>
+    <li><a href="{{ route('catprod') }}">Категории-Товары</a></li>
     <li><a href="{{ route('about') }}">О нас</a></li>
     <li><a href="{{ route('myadmin') }}">Админка</a></li>
 </ul>
@@ -26,6 +27,7 @@
 @yield('user')
 @yield('admin')
 @yield('about')
+@yield('catprod')
 <script src="{{ asset('js/script.js') }}"></script> 
 </body>
 </html>

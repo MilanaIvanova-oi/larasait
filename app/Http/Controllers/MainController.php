@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Main;
 use App\Models\About;
+use App\Models\Category;
+use App\Models\Prod;
 
 
 class MainController extends Controller
@@ -28,5 +30,12 @@ class MainController extends Controller
         }
 
         return view('front.about');
+    }
+     public function catprod()
+    {
+        $cat = Category::all();
+        $prod = Prod::all();
+
+        return view('front.catprod', ['cat'=>$cat, 'prod' =>$prod]);
     }
 }

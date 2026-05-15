@@ -139,3 +139,53 @@
         ::-webkit-scrollbar-thumb { background: #d4a0a6; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #c28a91; } */
         /* 🍒 Стили для меню навигации */
+
+        .block{
+            width: 80%;
+            height: 500px;
+            border: 1px solid burlywood;
+            display: flex;
+            margin: 0 auto;
+
+        }
+        .block_cat{
+            width: 70%;
+            height: 500px;
+
+        }
+
+        .block_prod{
+            width: 30%;
+            height: 500px;
+        }
+
+                /* 🍒 Стили для меню навигации */
+        .ul {
+            list-style: none;
+            margin: 0;
+            padding: 14px 20px;
+            background: #ffffff;
+            border-bottom: 2px solid #f0d0d4;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        .ul li a {
+            text-decoration: none;
+            color: #9e1b32;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 8px 18px;
+            border-radius: 8px;
+            transition: all 0.25s ease;
+            display: block;
+        }
+
+        .ul li a:hover {
+            background: #fce8ea;
+            transform: translateY(-2px);
+            color: #7a1526;
+        }

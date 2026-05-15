@@ -22,5 +22,9 @@ Route::get('/about', [MainController::class, 'about'])->name('about');
 
 Route::post('/about', [MainController::class, 'about'])->name('about_start');
 
+Route::get('/catprod', [MainController::class, 'catprod'])->name('catprod');
+
+Route::get('/catprodlink/{id}', [MainController::class, 'catprodlink'])->name('catprodlink');
+
 // Маршруты для админпанели
 Route::get('/myadmin',[MyAdminController::class,'index'])->name('myadmin');
